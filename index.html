@@ -3,35 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<h1>Formulario</h1>
+<div class="form">
+<h1>Agregar Proyecto</h1>
+<!--Formulario-->
 <form>
-        <div>
-            <label for="title">Título:</label><br>
-            <input type="text" id="title" name="title" value="Nombre de Proyecto">
+    <div class="title"><!--Título Proyecto-->
+            <label for="title">Título:</label>
+            <input type="text" id="title" name="title" placeholder="Nombre de Proyecto" required>
         </div><br>
     <div>
-        <label for="date">Fecha:</label><br>
-        <input type="date" id="date" name="date" value="">
+        <label for="image">Imagen:</label>
+        <input type="file" name="imageUpload" accept="image/*" required>
+    </div><br>
+    <div><!--Fecha-->
+        <label for="date">Fecha:</label>
+        <input type="date" id="date" name="date" value="" required>
+        </div><br>
+    <div><!--Breve descripción del proyecto-->
+        <label for="description">Descripción:</label>
+        <input type="text" id="description" name="description" value="" required>
         </div><br>
     <div>
-        <label for="description">Descripción:</label><br>
-        <input type="text" id="description" name="description" value="">
-        </div><br>
-    <div>
-        <label for="link">Link:</label><br>
-        <input type="url" id="link" name="link" value="">
-        </div><br>
-    <div>
-        <label for="image">Imagen</label><br>
-        <input type="image" id="image" name="image">
+        <label for="link">Link:</label>
+        <input type="url" id="link" name="link" placeholder="Url del Proyecto" required>
         </div><br>
 
-    <input type="submit" value="Enviar">
-    
+    <input class="submit" type="submit" value="Enviar">
+</div>
+
 </form>
 </body>
 </html>
